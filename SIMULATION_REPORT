@@ -1,0 +1,156 @@
+# Simulation Report – Arithmetic Logic Unit (ALU) Using Verilog HDL
+
+## Introduction
+
+This simulation report presents the design and verification of a basic Arithmetic Logic Unit (ALU) implemented using Verilog HDL. The main purpose of this project was to understand the working of combinational digital circuits and gain practical exposure to hardware description language programming and simulation techniques used in VLSI design.
+
+An ALU is one of the most important components of a processor because it performs arithmetic and logical operations on binary data. In this project, a simple 4-bit ALU was designed to perform five operations: Addition, Subtraction, AND, OR, and NOT.
+
+The design was simulated successfully using Vivado, and the waveform outputs were verified for correctness.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Objective
+
+The objective of this simulation was:
+
+* To design a basic ALU using Verilog HDL
+* To perform arithmetic and logical operations
+* To understand the working of combinational circuits
+* To verify the functionality using a testbench and waveform simulation
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Software Used
+
+The following software tools were used during the project:
+
+* Vivado Design Suite
+* Verilog HDL
+
+Vivado was used for writing the code, compiling the design, running simulations, and observing waveforms.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## ALU Description
+
+The ALU was designed using two 4-bit inputs named A and B, a 3-bit select line named `sel`, and a 4-bit output named Y.
+
+The select line controls the operation performed by the ALU.
+
+| Select Value | Operation   |
+| ------------ | ----------- |
+| 000          | Addition    |
+| 001          | Subtraction |
+| 010          | AND         |
+| 011          | OR          |
+| 100          | NOT         |
+
+The design was implemented using an `always` block and a `case` statement in Verilog HDL.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Simulation Procedure
+
+The simulation process was carried out in the following steps:
+
+1. The Verilog module for the ALU was written.
+2. A separate testbench file was created.
+3. Different input combinations were applied through the testbench.
+4. The simulation was executed using Vivado.
+5. Waveforms were analyzed to verify the output.
+
+The testbench generated different values for A, B, and the select line to test every operation supported by the ALU.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Results and Verification
+
+The simulation outputs matched the expected values for all operations.
+
+### Addition
+
+For:
+
+* A = 0101
+* B = 0011
+* sel = 000
+
+Output obtained:
+
+0101+0011=1000
+
+The output was correct.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Subtraction
+
+For:
+
+* A = 1000
+* B = 0010
+* sel = 001
+
+Output obtained:
+
+1000-0010=0110
+
+The output matched the expected result.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### AND Operation
+
+For:
+
+* A = 1100
+* B = 1010
+* sel = 010
+
+Output obtained:
+
+1100&1010=1000
+
+The logical AND operation worked correctly.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### OR Operation
+
+For:
+
+* A = 1100
+* B = 1010
+* sel = 011
+
+Output obtained:
+
+1100|1010=1110
+
+The output waveform verified correct OR operation.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### NOT Operation
+
+For:
+
+* A = 1100
+* sel = 100
+
+Output obtained:
+
+\sim1100=0011
+
+The inversion operation produced the correct output.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Conclusion
+
+The Arithmetic Logic Unit was successfully designed and simulated using Verilog HDL. All arithmetic and logical operations produced the expected outputs during simulation. The waveform analysis confirmed the proper functioning of the ALU for every select input condition.
+
+This project provided practical understanding of Verilog programming, combinational circuit design, testbench creation, and digital circuit simulation. It also helped in understanding the internal working of processors and digital systems.
+
+Overall, the simulation was completed successfully, and the project achieved all intended objectives.
