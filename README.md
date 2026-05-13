@@ -137,6 +137,10 @@ ALUs are widely used in:
 
 This project helped in understanding how these systems internally perform computations.
 
+#Output
+
+<img width="1257" height="675" alt="Image" src="https://github.com/user-attachments/assets/16fb071b-c572-4b34-b7c4-a8eabbf91e20" />
+
 ---------------------------------------------------------------------------------------------------------
 
 ## Conclusion
